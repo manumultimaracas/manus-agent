@@ -16,6 +16,33 @@ function chamarWhatsApp(nomeProduto) {
     window.open(linkWhatsApp, '_blank');
 }
 
+// Função para criar partículas
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    document.querySelector('.particles-container').appendChild(particle);
+
+    const size = Math.random() * 5 + 2; // Tamanho entre 2px e 7px
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    const startX = Math.random() * window.innerWidth;
+    particle.style.left = `${startX}px`;
+    particle.style.top = `${window.innerHeight}px`; // Começa na parte inferior
+
+    const animationDuration = Math.random() * 10 + 5; // Duração entre 5s e 15s
+    particle.style.animationDuration = `${animationDuration}s`;
+    particle.style.animationDelay = `${Math.random() * 5}s`; // Atraso aleatório
+
+    // Remove a partícula após a animação para evitar acúmulo
+    particle.addEventListener('animationend', () => {
+        particle.remove();
+    });
+}
+
+// Gera partículas em intervalos regulares
+setInterval(createParticle, 300); // Cria uma nova partícula a cada 300ms
+
 // Animação suave ao rolar a página
 document.addEventListener('DOMContentLoaded', function() {
     // Observador para animações ao entrar na viewport
@@ -113,4 +140,5 @@ if (isMobile()) {
         document.head.appendChild(style);
     });
 }
+
 
