@@ -1,0 +1,463 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative; /* Necessário para posicionar as partículas */
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Garante que as partículas fiquem atrás do conteúdo */
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 215, 0, 0.3); /* Dourado translúcido */
+    border-radius: 50%;
+    animation: floatAndFade 15s infinite ease-in-out;
+}
+
+@keyframes floatAndFade {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    line-height: 1.5;
+}
+
+/* Seções */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    border-radius: 2px;
+}
+
+/* Produtos em Destaque */
+.produtos-destaque {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.produto-card {
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.produto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.produto-card:hover::before {
+    opacity: 1;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+}
+
+.produto-image {
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.produto-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover .produto-image img {
+    transform: scale(1.05);
+}
+
+.produto-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.produto-descricao {
+    color: #cccccc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.produto-preco {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFA500; /* Dourado mais vibrante para o preço */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(255, 165, 0, 0.5);
+}
+
+.btn-whatsapp {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(45deg, #128C7E, #25D366);
+}
+
+.btn-whatsapp i {
+    font-size: 1.2rem;
+}
+
+/* Contato */
+.contato {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.contato-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-contato {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-contato.whatsapp {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    color: white;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-contato.whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+.btn-contato.instagram {
+    background: linear-gradient(45deg, #E4405F, #C13584, #833AB4);
+    color: white;
+    box-shadow: 0 5px 20px rgba(228, 64, 95, 0.3);
+}
+
+.btn-contato.instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(228, 64, 95, 0.4);
+}
+
+.btn-contato i {
+    font-size: 1.3rem;
+}
+
+/* Sobre */
+.sobre {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-text {
+    font-size: 1.3rem;
+    color: #cccccc;
+    line-height: 1.8;
+    font-weight: 300;
+    position: relative;
+    padding: 40px;
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.sobre-text::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: #FFD700;
+    font-family: 'Playfair Display', serif;
+    opacity: 0.3;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.footer p {
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contato-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-contato {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .sobre-text {
+        font-size: 1.1rem;
+        padding: 30px 20px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .brand-name {
+        font-size: 1.8rem;
+    }
+    
+    .hero-title {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .produto-card {
+        padding: 20px;
+    }
+    
+    .btn-whatsapp {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-contato {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.produto-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.produto-card:nth-child(1) { animation-delay: 0.1s; }
+.produto-card:nth-child(2) { animation-delay: 0.2s; }
+.produto-card:nth-child(3) { animation-delay: 0.3s; }
+
+
+
