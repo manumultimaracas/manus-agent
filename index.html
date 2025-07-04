@@ -1,351 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Manu Multimarcas</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="particles-container"></div>
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Barra lateral de categorias -->
+    <div class="categorias-barra">
+        <ul>
+            <li><a href="#produtos">Perfumes</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </div>
 
     <header class="header">
         <div class="logo-container">
-            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            <img src="logo.png" alt="Logo Manu Multimarcas" class="logo" />
             <h1 class="brand-name">Manu Multimarcas</h1>
         </div>
         <div class="hero-text">
-            <p class="hero-title">Perfumes originais, importados e nacionais, com os melhores preços de Jequié!</p>
+            <p class="hero-title">Perfumes originais, nacionais e importados — com os melhores preços de Jequié!</p>
         </div>
     </header>
 
-    <section class="produtos-destaque">
+    <!-- Produtos -->
+    <section class="produtos-destaque" id="produtos">
         <h2 class="section-title">Perfumes em Destaque</h2>
         <div class="produtos-grid">
-            <!-- Produtos serão inseridos aqui -->
+            <!-- PERFUMES AQUI -->
+            <!-- Cada bloco abaixo é um perfume -->
+            
+            <div class="produto-card">
+                <div class="produto-image">
+                    <img src="img/sabah.jpg" alt="Sabah" />
+                </div>
+                <h3 class="produto-nome">Sabah</h3>
+                <p class="produto-descricao">Aroma marcante e sedutor com toque oriental. Perfeito para quem quer se destacar.</p>
+                <p class="produto-preco">R$ 300,00</p>
+                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Comprar no WhatsApp</a>
+            </div>
 
             <div class="produto-card">
                 <div class="produto-image">
-                    <img src="assets/images/sabah.jpg" alt="SABAH">
-                </div>
-                <h3 class="produto-nome">SABAH</h3>
-                <p class="produto-descricao">Aroma marcante e sedutor com toque oriental. Perfeito para quem quer se destacar.</p>
-                <div class="produto-preco">R$ 300,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20SABAH." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/sauvage_dior.jpg" alt="Sauvage Dior">
+                    <img src="img/sauvage.jpg" alt="Sauvage Dior" />
                 </div>
                 <h3 class="produto-nome">Sauvage Dior</h3>
                 <p class="produto-descricao">Elegância selvagem com frescor e intensidade. Clássico masculino de presença forte.</p>
-                <div class="produto-preco">R$ 850,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Sauvage%20Dior." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
+                <p class="produto-preco">R$ 850,00</p>
+                <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Comprar no WhatsApp</a>
             </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/asad_lattafa.jpg" alt="Asad Lattafa">
-                </div>
-                <h3 class="produto-nome">Asad Lattafa</h3>
-                <p class="produto-descricao">Perfume árabe poderoso, com notas quentes e especiadas. Fixação absurda!</p>
-                <div class="produto-preco">R$ 330,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Asad%20Lattafa." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/fakhar_gold.jpg" alt="Fakhar Gold">
-                </div>
-                <h3 class="produto-nome">Fakhar Gold</h3>
-                <p class="produto-descricao">Luxo e sofisticação em um frasco. Fragrância envolvente com fundo amadeirado.</p>
-                <div class="produto-preco">R$ 380,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Fakhar%20Gold." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/fakhar_back.jpg" alt="Fakhar Back">
-                </div>
-                <h3 class="produto-nome">Fakhar Back</h3>
-                <p class="produto-descricao">Perfume intenso com notas doces e sedutoras. Ideal para a noite.</p>
-                <div class="produto-preco">R$ 330,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Fakhar%20Back." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/fakhar_rose.jpg" alt="Fakhar Rose">
-                </div>
-                <h3 class="produto-nome">Fakhar Rose</h3>
-                <p class="produto-descricao">Floral elegante com toque moderno. Feminino, marcante e inesquecível.</p>
-                <div class="produto-preco">R$ 400,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Fakhar%20Rose." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/club_de_nuit_intense_man.jpg" alt="Club de Nuit Intense Man">
-                </div>
-                <h3 class="produto-nome">Club de Nuit Intense Man</h3>
-                <p class="produto-descricao">Inspiração de perfume importado com projeção potente. Charme e poder em um só.</p>
-                <div class="produto-preco">R$ 400,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Club%20de%20Nuit%20Intense%20Man." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/yara_tradicional.jpg" alt="Yara Tradicional">
-                </div>
-                <h3 class="produto-nome">Yara Tradicional</h3>
-                <p class="produto-descricao">Doce e romântico com frescor marcante. Um dos queridinhos entre elas.</p>
-                <div class="produto-preco">R$ 400,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Yara%20Tradicional." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/delilah.jpg" alt="Delilah">
-                </div>
-                <h3 class="produto-nome">Delilah</h3>
-                <p class="produto-descricao">Floral delicado e envolvente. Para quem ama perfume feminino de presença.</p>
-                <div class="produto-preco">R$ 300,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Delilah." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/olivia_blossom.jpg" alt="Olivia Blossom">
-                </div>
-                <h3 class="produto-nome">Olivia Blossom</h3>
-                <p class="produto-descricao">Perfume suave e elegante. Perfeito para o dia a dia com charme.</p>
-                <div class="produto-preco">R$ 300,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Olivia%20Blossom." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/oud_for_glory.jpg" alt="Oud for Glory">
-                </div>
-                <h3 class="produto-nome">Oud for Glory</h3>
-                <p class="produto-descricao">Misterioso, forte e marcante. Combinação luxuosa de oud e especiarias.</p>
-                <div class="produto-preco">R$ 350,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Oud%20for%20Glory." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/salvo_intense.jpg" alt="Salvo Intense">
-                </div>
-                <h3 class="produto-nome">Salvo Intense</h3>
-                <p class="produto-descricao">Inspirado no Sauvage Dior, com frescor cítrico e fixação poderosa. Ideal pra quem gosta de presença marcante.</p>
-                <div class="produto-preco">R$ 280,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Salvo%20Intense." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/baroque_tradicional.jpg" alt="Baroque Tradicional">
-                </div>
-                <h3 class="produto-nome">Baroque Tradicional</h3>
-                <p class="produto-descricao">Perfume oriental amadeirado com elegância e longa duração. Ideal para eventos e noites especiais.</p>
-                <div class="produto-preco">R$ 280,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Baroque%20Tradicional." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/baroque_extrait.jpg" alt="Baroque Extrait">
-                </div>
-                <h3 class="produto-nome">Baroque Extrait</h3>
-                <p class="produto-descricao">Um extrato de perfume refinado. Fixação longa e aroma envolvente.</p>
-                <div class="produto-preco">R$ 300,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Baroque%20Extrait." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/natura_homem_evolution.jpg" alt="Natura Homem Evolution">
-                </div>
-                <h3 class="produto-nome">Natura Homem Evolution</h3>
-                <p class="produto-descricao">Masculino moderno com frescor herbal e toque sofisticado.</p>
-                <div class="produto-preco">R$ 220,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Natura%20Homem%20Evolution." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/essencial_masculino.jpg" alt="Essencial Masculino">
-                </div>
-                <h3 class="produto-nome">Essencial Masculino</h3>
-                <p class="produto-descricao">Clássico da perfumaria nacional. Elegância e intensidade em cada borrifada.</p>
-                <div class="produto-preco">R$ 200,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Essencial%20Masculino." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/essencial_feminino.jpg" alt="Essencial Feminino">
-                </div>
-                <h3 class="produto-nome">Essencial Feminino</h3>
-                <p class="produto-descricao">Floral marcante com presença sofisticada. Ideal para ocasiões especiais.</p>
-                <div class="produto-preco">R$ 200,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Essencial%20Feminino." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/essencial_tradicional.jpg" alt="Essencial Tradicional">
-                </div>
-                <h3 class="produto-nome">Essencial Tradicional</h3>
-                <p class="produto-descricao">Equilíbrio perfeito entre sofisticação e suavidade. Atemporal.</p>
-                <div class="produto-preco">R$ 200,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Essencial%20Tradicional." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/arbo.jpg" alt="Arbo">
-                </div>
-                <h3 class="produto-nome">Arbo</h3>
-                <p class="produto-descricao">Frescor da natureza em uma fragrância leve e refrescante.</p>
-                <div class="produto-preco">R$ 150,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Arbo." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/luna.jpg" alt="Luna">
-                </div>
-                <h3 class="produto-nome">Luna</h3>
-                <p class="produto-descricao">Feminino e poderoso com notas florais e frutadas.</p>
-                <div class="produto-preco">R$ 140,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Luna." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/kaiak.jpg" alt="Kaiak">
-                </div>
-                <h3 class="produto-nome">Kaiak</h3>
-                <p class="produto-descricao">Frescor esportivo e vibrante. Ideal para dias quentes e rotina agitada.</p>
-                <div class="produto-preco">R$ 130,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Kaiak." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/mamae_e_bebe.jpg" alt="Mamãe e Bebê">
-                </div>
-                <h3 class="produto-nome">Mamãe e Bebê</h3>
-                <p class="produto-descricao">Suavidade e carinho em forma de fragrância. Acalma e perfuma com amor.</p>
-                <div class="produto-preco">R$ 70,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Mamãe%20e%20Bebê." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/meu_primeiro_humor.jpg" alt="Meu Primeiro Humor">
-                </div>
-                <h3 class="produto-nome">Meu Primeiro Humor</h3>
-                <p class="produto-descricao">Alegre, jovem e marcante. Fragrância divertida com personalidade.</p>
-                <div class="produto-preco">R$ 120,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Meu%20Primeiro%20Humor." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/kaiak_ultra.jpg" alt="Kaiak Ultra">
-                </div>
-                <h3 class="produto-nome">Kaiak Ultra</h3>
-                <p class="produto-descricao">Mais intensidade, mais frescor, mais performance.</p>
-                <div class="produto-preco">R$ 120,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Kaiak%20Ultra." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/kaiak_aventura.jpg" alt="Kaiak Aventura">
-                </div>
-                <h3 class="produto-nome">Kaiak Aventura</h3>
-                <p class="produto-descricao">Fragrância para quem ama liberdade e natureza.</p>
-                <div class="produto-preco">R$ 120,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Kaiak%20Aventura." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
-            <div class="produto-card">
-                <div class="produto-image">
-                    <img src="assets/images/kaiak_urbe.jpg" alt="Kaiak Urbe">
-                </div>
-                <h3 class="produto-nome">Kaiak Urbe</h3>
-                <p class="produto-descricao">Urbanidade e estilo com frescor moderno.</p>
-                <div class="produto-preco">R$ 120,00</div>
-                <a href="https://wa.me/5573999999999?text=Olá!%20Gostaria%20de%20comprar%20o%20perfume%20Kaiak%20Urbe." class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-    
+
+            <!-- Adicione os outros perfumes abaixo copiando esse modelo -->
+
+            <!-- EXEMPLO (você pode continuar com os outros perfumes seguindo esse modelo acima) -->
+
         </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="#produtos" class="btn-whatsapp"><i class="fas fa-arrow-down"></i> Ver Mais Produtos</a>
+
+        <!-- Botão Ver Mais -->
+        <div class="ver-mais-container">
+            <button class="btn-ver-mais" onclick="location.href='#produtos'">Ver mais produtos</button>
         </div>
     </section>
 
+    <!-- Sobre -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <p class="sobre-text">
+                    Na Manu Multimarcas você encontra os melhores perfumes importados e nacionais, com preços especiais e pronta entrega em Jequié-BA. Trabalhamos com amor e qualidade, oferecendo atendimento personalizado para cada cliente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <div class="contato-buttons">
+                <a href="https://wa.me/SEUNUMERO" class="btn-contato whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://instagram.com/multimarcas_manu" class="btn-contato instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer class="footer">
-        <p>&copy; 2025 Manu Multimarcas. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2025 Manu Multimarcas. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a2e0f1f0e8.js" crossorigin="anonymous"></script>
+    <script>
+        // Gera partículas no fundo
+        const particleContainer = document.getElementById('particles');
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.width = `${Math.random() * 6 + 4}px`;
+            particle.style.height = particle.style.width;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particleContainer.appendChild(particle);
+        }
+    </script>
 </body>
 </html>
